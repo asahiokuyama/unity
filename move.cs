@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI;　//UIのヘッダファイルをインクルード
 
 public class move : MonoBehaviour
 {
-    GameObject fintext;
-    void Start() {
-        fintext = GameObject.Find("Text");
-    }
-void Update () {
+
+    GameObject fintext;//テキストを扱うGameObject型の変数を用意
+    
+ 	void Start() {
+		fintext = GameObject.Find("Text");//上の変数にUnity内のテキストを格納
+   	}
+	
+	void Update () {//関係ない
  
 		float dy = Input.GetAxis("Vertical");
 		float dx = Input.GetAxis("Horizontal");
@@ -31,9 +34,11 @@ void Update () {
 		}
 	}
 
-    private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.CompareTag("fin")){
-            fintext.GetComponent<Text>().text = "あたった！！";
+
+    private void OnCollisionEnter(Collision other) {//当たった時
+    
+        if(other.gameObject.CompareTag("fin")){//もし当たったオブジェクトのタグが〇〇なら
+            fintext.GetComponent<Text>().text = "あたった！！";//変数内のTextを取得、Text内のtextを変更。
         }
     }
 }
