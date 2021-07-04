@@ -14,24 +14,25 @@ public class move : MonoBehaviour
 	
 	void Update () {//関係ない
  
-		float dy = Input.GetAxis("Vertical");
-		float dx = Input.GetAxis("Horizontal");
+// 		float dy = Input.GetAxis("Vertical");
+// 		float dx = Input.GetAxis("Horizontal");
  
-		if (Input.GetKey("up")) {
-			transform.Translate(0, dy, 0);
-		}
+// 		if (Input.GetKey("up")) {
+// 			transform.Translate(0, dy, 0);
+// 		}
  
-		if (Input.GetKey("down")) {
-			transform.Translate(0, dy, 0);
-		}
+// 		if (Input.GetKey("down")) {
+// 			transform.Translate(0, dy, 0);
+// 		}
  
-		if (Input.GetKey("left")) {
-			transform.Translate(dx, 0, 0);
-		}
+// 		if (Input.GetKey("left")) {
+// 			transform.Translate(dx, 0, 0);
+// 		}
  
-		if (Input.GetKey("right")) {
-			transform.Translate(dx*Time.deltaTime, 0, 0);
-		}
+// 		if (Input.GetKey("right")) {
+// 			transform.Translate(dx*Time.deltaTime, 0, 0);
+// 		}
+		transform.position += new Vector3(Input.GetAxis("Vertical"),0,0);
 	}
 
 
