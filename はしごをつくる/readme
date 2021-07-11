@@ -1,0 +1,8 @@
+触れているときだけy軸方向に昇降可能なオブジェクトをつくる。
+
+ポイント
+・isTrrigerをオンにしてonTrrigerEnterとonTrrigerExitをうまくつかう。
+
+・rigidbodyのuseGravityをプログラム内で制御する。
+
+・bool変数をうまくつかってはしごにふれているとき、ふれていないときを判定する。
