@@ -9,5 +9,5 @@
 
 ので、unity内に限った話をすれば、例えば
 OnCollisionEnter内で変数宣言してカウントアップしたcountを、Update()内で使用することはできません。
-なぜなら、そのcountはローカル変数であり、OnCollisionEnter内が寿命だからです。
+なぜなら、そのcountはローカル変数であり、OnCollisionEnter内で寿命が尽きるからです。
 そういう時はグローバル変数を使います。
