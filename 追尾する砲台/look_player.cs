@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class look_player : MonoBehaviour
 {
-    public GameObject targert;
+    public GameObject targert;//targetを入れる変数
     bool rock = false;
     // Start is called before the first frame update
     void Start()
@@ -17,16 +17,10 @@ public class look_player : MonoBehaviour
     {
         Debug.Log(targert.transform.rotation.x );
         
-
-        // if(transform.localEulerAngles.x >= 320){
-        //     var aim = targert.transform.position - this.transform.position;
-        //     var look = Quaternion.LookRotation(aim);
-        //     this.transform.localRotation = look;
-        // }else{
-        //     this.transform.localEulerAngles = new Vector3(-30,0,0);
-        // }&&transform.localEulerAngles.x >=0transform.localEulerAngles.x <= 330&&
-        var a = targert.transform;
-        transform.LookAt(a);
+        //ずっとこのオブジェクトはtargetを追って回転する
+        transform.LookAt(targert.transform);
+        
+        //ここがポイントで、変数をつかって疑似ロック的なことをしている。これをしないと正常に動かない
         if(rock == false){
             if(transform.rotation.x <=-0.3){
                 rock = true;
