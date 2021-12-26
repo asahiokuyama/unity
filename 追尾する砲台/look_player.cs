@@ -15,14 +15,15 @@ public class look_player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(targert.transform.rotation.x );
+        //是非この値も見てみてください
+        Debug.Log(transform.rotation.x );
         
         //ずっとこのオブジェクトはtargetを追って回転する
         transform.LookAt(targert.transform);
         
-        if(transform.rotation.x <=-0.3){
+        if(transform.rotation.x <=-0.3){//上側
             this.transform.localEulerAngles = new Vector3(-30,0,0);
-        }else if(transform.rotation.x >= 0.3{
+        }else if(transform.rotation.x >= 0.3{//下側
             this.transform.localEulerAngles = new Vector3(30,0,0);
         }
     }
