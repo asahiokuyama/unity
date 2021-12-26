@@ -22,9 +22,8 @@ public class look_player : MonoBehaviour
         
         if(transform.rotation.x <=-0.3){
             this.transform.localEulerAngles = new Vector3(-30,0,0);
-
+        }else if(transform.rotation.x >= 0.3{
+            this.transform.localEulerAngles = new Vector3(30,0,0);
         }
-
-     
     }
 }
